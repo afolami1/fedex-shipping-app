@@ -1,0 +1,78 @@
+.shipment-form h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #4d148c;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.shipment-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.shipment-receipt {
+  margin-top: 40px;
+  padding: 30px;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.shipment-receipt h2 {
+  color: #4d148c;
+  margin-bottom: 20px;
+}
+
+.shipment-receipt p {
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+.paid-status {
+  color: green;
+  font-weight: bold;
+}
+
+.print-button {
+  margin-top: 20px;
+  background: #4d148c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.print-button:hover {
+  opacity: 0.9;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .shipment-receipt,
+  .shipment-receipt * {
+    visibility: visible;
+  }
+
+  .shipment-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+  }
+
+  .print-button {
+    display: none;
+  }
+}
