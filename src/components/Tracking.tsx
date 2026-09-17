@@ -23,7 +23,7 @@ function Tracking() {
       console.log("Tracking number:", number);
 
       const response = await axios.get(
-        `https://fedex-backend-5rca.onrender.com/api/track/${number}/`
+       "https://globalshippingonline247.onrender.com/api/track/" + number + "/"
       );
 
       console.log("Django response:", response.data);
@@ -43,6 +43,7 @@ function Tracking() {
         destinationCity: data.destination_city,
         destinationAddress: data.destination_address,
         weight: data.weight,
+        payment_amount: data.payment_amount,
         paymentMethod: data.payment_method,
         paymentStatus: data.payment_status,
         status: data.status,
@@ -134,6 +135,9 @@ function Tracking() {
               <p>
                 <strong>Weight:</strong> {shipment.weight}
               </p>
+              {Number(shipment.payment_amount) > 0 && (
+                <p> <strong>Payment Amount:</strong> $ {shipment.payment_amount} </p> )}
+              
 
               <p>
                 <strong>Payment Status:</strong> {shipment.paymentStatus}

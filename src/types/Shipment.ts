@@ -23,6 +23,8 @@ export interface Shipment {
   destinationAddress: string;
 
   weight: string;
+  payment_amount: number;
+
 
   paymentMethod: string;
   paymentStatus: string;
