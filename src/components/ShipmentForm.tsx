@@ -82,10 +82,11 @@ const shipmentData = {
 };
 
 try {
-  await axios.post(
-    "globalshippingonline247.onrender.com/",
+  const response = await axios.post(
+    "https://globalshippingonline247.onrender.com/api/",
     shipmentData
   );
+  console.log("DJANGO CREATE RESPONSE:", response.data);
 
   setTrackingNumber(newTrackingNumber);
   setPaymentStatus("Paid");
