@@ -23,7 +23,7 @@ function Tracking() {
       console.log("Tracking number:", number);
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/track/" + number + "/"
+        "https://globalshippingonline247.onrender.com/api/track/" + number + "/"
       );
 
       console.log("Django response:", response.data);

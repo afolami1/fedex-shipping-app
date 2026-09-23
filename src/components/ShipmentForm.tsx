@@ -335,7 +335,7 @@ console.log("SENDING SHIPMENT TO DJANGO");
 
 try {
   const response = await axios.post(
-    "http://127.0.0.1:8000/api/",
+    "https://globalshippingonline247.onrender.com/api/",
     formData
   );
 
