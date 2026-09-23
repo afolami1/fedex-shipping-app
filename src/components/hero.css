@@ -1,0 +1,191 @@
+.hero {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  background: #062b68;
+  color: white;
+}
+
+.hero-image-plane,
+.hero-image-truck,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-image-plane {
+ background-image: url("/images/plane 22.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-image-truck {
+  background-image: url("/images/truck 22.jpg");
+  background-size: 55% auto;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  z-index: 1;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 29, 73, 0.96) 0%,
+      rgba(4, 49, 112, 0.82) 42%,
+      rgba(3, 55, 120, 0.35) 72%,
+      rgba(3, 29, 73, 0.15) 100%
+    );
+  z-index: 2;
+}
+
+.hero-container {
+  width: min(1180px, 92%);
+  min-height: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 620px;
+  padding: 55px 0;
+}
+
+.hero-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+}
+
+.hero-label span {
+  color: #35b8ff;
+  margin: 0 6px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(44px, 5.5vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: #31b7ff;
+}
+
+.hero p {
+  max-width: 540px;
+  margin: 24px 0 30px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #e7f3ff;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-primary-button,
+.hero-secondary-button {
+  min-width: 180px;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.hero-primary-button {
+  border: none;
+  background: #087cf5;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.hero-primary-button:hover {
+  background: #1595ff;
+  transform: translateY(-2px);
+}
+
+.hero-secondary-button {
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.hero-secondary-button:hover {
+  background: white;
+  color: #0753a8;
+}
+
+@media (max-width: 850px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-container {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    padding: 55px 0;
+    max-width: 600px;
+  }
+
+  .hero-image-truck {
+    background-size: 80% auto;
+    background-position: right bottom;
+    opacity: 0.8;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3, 29, 73, 0.94) 0%,
+        rgba(3, 45, 100, 0.82) 55%,
+        rgba(3, 29, 73, 0.6) 100%
+      );
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero-container {
+    min-height: 650px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+    letter-spacing: -2px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    width: 100%;
+  }
+
+  .hero-image-truck {
+    background-size: 110% auto;
+  }
+}
